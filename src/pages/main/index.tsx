@@ -3,7 +3,7 @@ import Categories from './categories'
 import Contact from './contact'
 import Front from './front'
 import Profile from './profile'
-import Footer from './footer'
+import Footer from '../components/footer'
 
 import './index.css'
 import WhiteBox from '../components/white-box'

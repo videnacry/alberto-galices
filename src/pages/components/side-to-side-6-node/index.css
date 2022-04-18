@@ -1,0 +1,92 @@
+.side-to-side-6-node-c {
+    position: relative;
+    overflow: hidden;
+    width: 90vw;
+    height: 45vh;
+    left: 5vw;
+}
+.side-to-side-6-node-c>div>img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.side-to-side-6-node-c>div:first-of-type>img {
+    width: 100%;
+}
+.side-to-side-6-node-c>div:first-of-type>img.reverse {
+    width: 60%;
+}
+.side-to-side-6-node-c>div:nth-of-type(2)>img {
+    width: 77%;
+    left: 0;
+    transform: translate(-0%, -50%);
+}
+.side-to-side-6-node-c>div:nth-of-type(2)>img.reverse {
+    left: unset;
+    right: 0;
+}
+.side-to-side-6-node-c>div:nth-of-type(3)>img {
+    width: 60%;
+}
+.side-to-side-6-node-c>div:nth-of-type(3)>img.reverse {
+    width: 100%;
+}
+.side-to-side-6-node-c>div:nth-of-type(4)>img {
+    width: 100%;
+}
+.side-to-side-6-node-c>div:nth-of-type(4)>img.reverse {
+    width: 60%;
+}
+.side-to-side-6-node-c>div:nth-of-type(5)>img {
+    width: 77%;
+    left: 0;
+    transform: translate(-0%, -50%);
+}
+.side-to-side-6-node-c>div:nth-of-type(5)>img.reverse {
+    left: unset;
+    right: 0;
+}
+.side-to-side-6-node-c>div:nth-of-type(6)>img {
+    width: 60%;
+}
+.side-to-side-6-node-c>div:nth-of-type(6)>img.reverse {
+    width: 100%;
+}
+.side-to-side-6-node-c>div {
+    position: absolute;
+    top: 50%;
+    animation-name: Side-to-side-6;
+    animation-iteration-count: infinite;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    width: 30vw;
+    height: auto;
+}
+@keyframes Side-to-side-6 {
+    0% {
+        transform: translate(0%, -50%);
+    }
+    20% {
+        transform: translate(0%, -50%);
+    }
+    23% {
+        transform: translate(100%, -50%);
+    }
+    50% {
+        transform: translate(100%, -50%);
+    }
+    53% {
+        transform: translate(200%, -50%);
+    }
+    80% {
+        transform: translate(200%, -50%);
+    }
+    83% {
+        transform: translate(300%, -50%);
+    }
+    100% {
+        transform: translate(300%, -50%);
+    }
+}
