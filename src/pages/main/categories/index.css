@@ -1,0 +1,45 @@
+.main_categories-s {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+.main_categories-s>.category-1, .main_categories-s>.category-2, .main_categories-s>.category-3 {
+    position: absolute;
+    overflow: hidden;
+}
+.main_categories-s>.category-1, .main_categories-s>.category-3 {
+    border: solid black 1px;
+}
+.main_categories-s>.category-2 {
+    left: -20%;
+    top: 15%;
+    width: 80%;
+    height: 100vh;
+}
+.main_categories-s>.category-1 {
+    z-index: 1;
+    right: 26%;
+    bottom: 55%;
+    transform: rotate(45deg);
+    width: 100%;
+    height: 100vh;
+}
+.main_categories-s>.category-3 {
+    left: 50%;
+    top: -14%;
+    transform: rotate(240deg);
+    width: 64%;
+    height: 130vh;
+}
+.main_categories-s>.title {
+    position: absolute;
+    top: 1em;
+    left: 1.8em;
+    z-index: 1;
+    font-size: 2.4em;
+    font-weight: normal;
+    color: white;
+    text-shadow: 1px 1px black, 1px -1px black, -1px 1px black, -1px -1px black;
+    text-align: left;
+}

@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import imagesDatabase from './database-local/images'
+import imagesDatabaseType from './database-types/images'
+import './index.css';
+
+const images:imagesDatabaseType = imagesDatabase
+
+export const Context = React.createContext({images})
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <App Context={Context} images={images}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

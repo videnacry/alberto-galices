@@ -1,0 +1,16 @@
+.nav-top-static-c {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.nav-top-static-c>a {
+    margin: 2em;
+    color: white;
+    font-size: 1.6em;
+    text-decoration: none;
+    text-shadow: 1px 1px rgb(24, 24, 24), 1px -1px rgb(24, 24, 24), -1px 1px rgb(24, 24, 24), -1px -1px rgb(24, 24, 24);
+}

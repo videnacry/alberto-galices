@@ -1,0 +1,53 @@
+.side-to-side-3-vanish-c {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.side-to-side-3-vanish-c>.image:first-of-type, .side-to-side-3-vanish-c>.image:nth-of-type(2) {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-name: image-vanish;
+    animation-iteration-count: infinite;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+.side-to-side-3-vanish-c>.image:nth-of-type(2) {
+    z-index: 1;
+    animation-delay: 10s;
+}
+.side-to-side-3-vanish-c>.image:nth-of-type(3) {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@keyframes image-vanish {
+    0% {
+        opacity: 1;
+    }
+    17% {
+        opacity: 1;
+    }
+    22% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    45% {
+        opacity: 0;
+    }
+    76% {
+        opacity: 0;
+    }
+    82% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+ 
