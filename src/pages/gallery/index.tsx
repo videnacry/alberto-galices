@@ -15,9 +15,11 @@ const GalleryPage = () => {
             <Nav/>
             <div className="nav-bg"/>
             <TabButtons titles={['Reportaje', 'Boda', 'Restauración']}/>
-            <SideToSide6Node images={context.images.wedding.departure} reverse={false}/>
-            <SideToSide6Node images={context.images.wedding.shrine} reverse={true}/>
-            <SideToSide6Node images={context.images.wedding.fiance} reverse={false}/>
+            {
+                Object.values(context.images.wedding).map((group, index) => (
+                    <SideToSide6Node key='gallery-wedding-index' images={group} reverse={index%2?false:true}/>
+                ))
+            }
             <Footer/>
         </div>
     )
