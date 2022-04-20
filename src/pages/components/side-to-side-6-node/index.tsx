@@ -7,9 +7,9 @@ const SideToSide6Node = (props:propsType) => {
     return (
         <div className='side-to-side-6-node-c'>
             {[1,2,3,4,5,6].map((num,index) => <div
+            className={`${props.reverse && 'reverse'}`}
             style={{
                 right: `${index*30}vw`
-                // animationDelay: `${index*10}s`
             }}
             >
                 <img 

@@ -74,30 +74,81 @@
     animation-timing-function: linear;
     animation-direction: alternate;
 }
+.side-to-side-6-node-c>div.reverse {
+    animation-name: Side-to-side-6-node-div-reverse;
+}
+.side-to-side-6-node-c>div:nth-of-type(2), .side-to-side-6-node-c>div:nth-of-type(4), .side-to-side-6-node-c>div:nth-of-type(6) {
+    animation-name: Side-to-side-6-node-div-reverse;
+}
+.side-to-side-6-node-c>div.reverse:nth-of-type(2), .side-to-side-6-node-c>div.reverse:nth-of-type(4), .side-to-side-6-node-c>div.reverse:nth-of-type(6) {
+    animation-name: Side-to-side-6-node-div;
+}
 @keyframes Side-to-side-6-node-div {
     0% {
         transform: translate(0%, -50%);
+        filter: saturate(0);
     }
     20% {
         transform: translate(0%, -50%);
+        filter: saturate(0);
     }
     23% {
         transform: translate(100%, -50%);
+        filter: saturate(1);
     }
     50% {
         transform: translate(100%, -50%);
+        filter: saturate(1);
     }
     53% {
         transform: translate(200%, -50%);
+        filter: saturate(0);
     }
     80% {
         transform: translate(200%, -50%);
+        filter: saturate(0);
     }
     83% {
         transform: translate(300%, -50%);
+        filter: saturate(1);
     }
     100% {
         transform: translate(300%, -50%);
+        filter: saturate(1);
+    }
+}
+@keyframes Side-to-side-6-node-div-reverse {
+    0% {
+        transform: translate(0%, -50%);
+        filter: saturate(1);
+    }
+    20% {
+        transform: translate(0%, -50%);
+        filter: saturate(1);
+    }
+    23% {
+        transform: translate(100%, -50%);
+        filter: saturate(0);
+    }
+    50% {
+        transform: translate(100%, -50%);
+        filter: saturate(0);
+    }
+    53% {
+        transform: translate(200%, -50%);
+        filter: saturate(1);
+    }
+    80% {
+        transform: translate(200%, -50%);
+        filter: saturate(1);
+    }
+    83% {
+        transform: translate(300%, -50%);
+        filter: saturate(0);
+    }
+    100% {
+        transform: translate(300%, -50%);
+        filter: saturate(0);
     }
 }
 @keyframes Side-to-side-6-node-img-big {
