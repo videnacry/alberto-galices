@@ -1,5 +1,6 @@
+type weddingSection = {W400:string, W1400:string}[]
 type images = {
-    wedding:{altar:string[], dance:string[], shrine:string[], fiancee:string[], fiance:string[], nearness:string[], departure:string[]}, 
+    wedding:{altar:weddingSection, dance:weddingSection, shrine:weddingSection, fiancee:weddingSection, fiance:weddingSection, nearness:weddingSection, departure:weddingSection}, 
     index:{contact:string[], profile:string[], categories:string[][], front:string[]}
 }
 
