@@ -13,7 +13,7 @@ const SideToSide6Node = (props:propsType) => {
             {[1,2,3,4,5,6].map((num,index) => <div
             className={`${props.reverse && 'reverse'}`}
             style={{
-                right: `${index*30}vw`
+                right: `${index*33.33}%`
             }}
             >
                 <img 

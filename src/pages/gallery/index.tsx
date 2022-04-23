@@ -11,7 +11,7 @@ const GalleryPage = () => {
     const context = useContext(Context)
     return (
         <div className="gallery-p">
-            <div className="h-2em"/>
+            <div className="nav-space"/>
             <Nav/>
             <div className="nav-bg"/>
             <TabButtons titles={['Reportaje', 'Boda', 'Restauración']}/>
