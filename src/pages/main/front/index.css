@@ -1,5 +1,27 @@
 .main-front-s {
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
+    max-height: 100vh;
     overflow: hidden;
+}
+@media screen and (max-aspect-ratio:1/1) {
+    .main-front-s {
+        background-color: beige;
+    }
+    .main-front-s>.nav-space {
+        min-height: 7em;
+        height: 8vh;
+    }
+}
+@media screen and (max-width: 600px) {
+    .main-front-s>.nav-space {
+        min-height: 10em;
+        height: 20vh;
+    }
+}
+@media screen and (max-width: 400px) {
+    .main-front-s>.nav-space {
+        min-height: 8em;
+        height: 20vh;
+    }
 }

@@ -11,7 +11,6 @@ const SideToSide_3_Vanish = (props:propsType) => {
                 key={'side-to-side-3-vanish-3'+index}
                 src={props.images[index]}
                 alt={`example ${num}`}
-                width='100%'
                 className='image'
                 />)}
         </div>

@@ -10,6 +10,7 @@ const Front = () => {
     
     return (
         <div className='main-front-s'>
+            <div className="nav-space"/>
             <Nav/>
             <SideToSide_3_Vanish images={context.images.index.front}/>
         </div>

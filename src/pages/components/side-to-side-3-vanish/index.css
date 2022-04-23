@@ -1,13 +1,19 @@
 .side-to-side-3-vanish-c {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: fit-content;
+    max-height: 100%;
+}
+.side-to-side-3-vanish-c>.image {
+    width: 100%;
+    height: auto;
 }
 .side-to-side-3-vanish-c>.image:first-of-type, .side-to-side-3-vanish-c>.image:nth-of-type(2) {
     position: absolute;
     z-index: 2;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     animation-name: image-vanish;
     animation-iteration-count: infinite;
     animation-duration: 40s;
@@ -19,10 +25,10 @@
     animation-delay: 10s;
 }
 .side-to-side-3-vanish-c>.image:nth-of-type(3) {
-    position: absolute;
+    position: relative;
     z-index: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
 }
 @keyframes image-vanish {
     0% {
@@ -50,4 +56,3 @@
         opacity: 1;
     }
 }
- 

@@ -1,5 +1,6 @@
 .nav-top-static-c {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     position: absolute;
     z-index: 3;
@@ -8,9 +9,40 @@
     width: 100%;
 }
 .nav-top-static-c>a {
-    margin: 2em;
+    margin: 5vh 5vw;
     color: white;
     font-size: 1.6em;
     text-decoration: none;
     text-shadow: 1px 1px rgb(24, 24, 24), 1px -1px rgb(24, 24, 24), -1px 1px rgb(24, 24, 24), -1px -1px rgb(24, 24, 24);
+}
+.nav-top-static-c>.title {
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    display: none;
+}
+@media screen and (max-width: 700px) {
+    .nav-top-static-c>a {
+        margin: 5vh 2vw;
+    }
+}
+@media screen and (max-width: 600px) {
+    .nav-top-static-c>a {
+        margin: 5vh 5vw;
+    }
+    .nav-top-static-c>.title {
+        display: unset;
+    }
+    .nav-top-static-c>.title-replacement {
+        display: none;
+    }
+}
+@media screen and (max-width: 400px) {
+    .nav-top-static-c {
+        justify-content: space-evenly;
+    }
+    .nav-top-static-c>a {
+        margin: 5vh 1vw;
+        font-size: 1.4em;
+    }
 }
