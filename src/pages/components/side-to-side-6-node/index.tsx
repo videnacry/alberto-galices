@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import IMGPopper from '../components/img-pooper'
 import './index.css'
@@ -6,6 +6,11 @@ import './index.css'
 type propsType = {images:{W400:string, W1400:string}[], reverse:boolean}
 const SideToSide6Node = (props:propsType) => {
     const [imgSelected, SetIMGSelected] = React.useState('')
+    const [imgSelectedIndex, SetIMGSelectedIndex] = React.useState(-1)
+
+    useEffect(()=>{
+        if(imgSelectedIndex>-1) SetIMGSelected(props.images[imgSelectedIndex].W1400)
+    },[imgSelectedIndex])
 
     return (
         <>
@@ -17,7 +22,10 @@ const SideToSide6Node = (props:propsType) => {
             }}
             >
                 <img 
-                onClick={e => SetIMGSelected(props.images[index].W1400)}
+                onClick={e => {
+                    SetIMGSelected(props.images[index].W1400)
+                    SetIMGSelectedIndex(index)
+                }}
                 className={`${props.reverse && 'reverse'}`}
                 key={'side-to-side-6-node'+index}
                 src={props.images[index].W400}
@@ -25,7 +33,13 @@ const SideToSide6Node = (props:propsType) => {
                 />
             </div>)}
         </div>
-        {imgSelected!==''&&<IMGPopper src={imgSelected} closePopper={()=>SetIMGSelected('')}/>}
+        {imgSelected!==''&&<IMGPopper 
+            src={imgSelected} 
+            closePopper={()=>SetIMGSelected('')} 
+            selectNextIMG={()=>{if(imgSelectedIndex<5)SetIMGSelectedIndex(imgSelectedIndex+1)}}
+            selectPrevIMG={()=>{if(imgSelectedIndex>0)SetIMGSelectedIndex(imgSelectedIndex-1)}}
+            />
+        }
         </>
     )
 }
