@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 
 import IMGPopper from '../components/img-pooper'
+import LoaderLayer from '../components/loader-layer'
 import './index.css'
 
 type propsType = {images:{W400:string, W1400:string}[], reverse:boolean}
@@ -33,12 +34,15 @@ const SideToSide6Node = (props:propsType) => {
                 />
             </div>)}
         </div>
-        {imgSelected!==''&&<IMGPopper 
-            src={imgSelected} 
-            closePopper={()=>SetIMGSelected('')} 
-            selectNextIMG={()=>{if(imgSelectedIndex<5)SetIMGSelectedIndex(imgSelectedIndex+1)}}
-            selectPrevIMG={()=>{if(imgSelectedIndex>0)SetIMGSelectedIndex(imgSelectedIndex-1)}}
-            />
+        {imgSelected!==''&&<>
+                <LoaderLayer zIndex={1} clickHandler={()=>SetIMGSelected('')}/>
+                <IMGPopper 
+                src={imgSelected} 
+                closePopper={()=>SetIMGSelected('')} 
+                selectNextIMG={()=>{if(imgSelectedIndex<5)SetIMGSelectedIndex(imgSelectedIndex+1)}}
+                selectPrevIMG={()=>{if(imgSelectedIndex>0)SetIMGSelectedIndex(imgSelectedIndex-1)}}
+                />
+            </>
         }
         </>
     )

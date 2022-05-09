@@ -2,6 +2,7 @@
     position: relative;
     overflow: hidden;
     width: 100%;
+    background-color: white;
 }
 .gallery-p>.nav-space {
     height: 2vh;

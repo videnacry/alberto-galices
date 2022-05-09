@@ -1,0 +1,16 @@
+.loader-layer-c-c {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f5f54f;
+}
+.loader-layer-c-c>.loader-layer-c-c_message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-shadow: 1px 1px rgb(24 24 24), 1px -1px rgb(24 24 24), -1px 1px rgb(24 24 24), -1px -1px rgb(24 24 24);
+}

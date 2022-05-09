@@ -9,7 +9,6 @@ import './index.css'
 import WhiteBox from '../components/white-box'
 
 const Main = () => {
-
     return (
         <div className='main-p'>
             <Front/>
